@@ -1,15 +1,19 @@
-const InputBar = () => {
+const InputBar = (props) => {
+
+    const { handleSubmit } = props
+
+
 
     return (
-    <div>
+    <form onSubmit={handleSubmit}>
         <label></label>
         <input 
             type="text" 
             placeholder="Add your task here...">
-
+            
         </input>
-        <button>Add</button>
-    </div>
+        <button type="submit">Add</button>
+    </form>
     )
 }
 
