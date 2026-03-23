@@ -30,6 +30,17 @@ function App() {
     )
   }
 
+  const handleDelete = (index) => {
+    setItems(
+      items.filter(((item, i) =>
+          i !== index
+      ))
+    )
+  }
+
+  const handleReset = (event) => {; 
+    setItems([]);
+  }
 
   return (
     <>
@@ -40,8 +51,9 @@ function App() {
       <ToDoList 
         items={items}
         handleClick={handleClick}
+        handleDelete={handleDelete}
       />
-      <button>Reset</button>
+      <button type="reset" onClick={handleReset}>Reset</button>
 
     </>
   )

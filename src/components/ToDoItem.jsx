@@ -2,9 +2,9 @@ import './ToDoItem.css'
 
 const ToDoItem = (props) => {
 
-    const { item, handleClick } = props
+    const { item, handleClick, handleDelete } = props
+   
 
-    
     return (
         <div>
             <input 
@@ -15,7 +15,7 @@ const ToDoItem = (props) => {
             <span className={item.completed ? "completed" : ""}>
                 {item.text}
             </span>
-            <button>Delete</button>
+            <button type="submit" onClick={handleDelete}>Delete</button>
             
         </div>
     )
