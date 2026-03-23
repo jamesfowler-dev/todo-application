@@ -5,18 +5,19 @@ const ToDoList = (props) => {
     const { items, handleClick, handleDelete } = props;
 
         return (
-            <div>
-                {items.map((item, index) => (
-                        <ToDoItem 
-                            key={index}
-                            item={item}
-                            handleClick={() => handleClick(index)}
-                            handleDelete={() => handleDelete(index)}
-                        />
-                    ))
-                }
-
-            </div>
+            <>
+                <>
+                    {items.map((item, index) => (
+                            <ToDoItem 
+                                key={index}
+                                item={item}
+                                handleClick={() => handleClick(index)}
+                                handleDelete={() => handleDelete(index)}
+                            />
+                        ))
+                    }
+                </>
+            </>
 
         )
 }
