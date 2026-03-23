@@ -2,7 +2,7 @@ import ToDoItem from "./ToDoItem.jsx"
 
 const ToDoList = (props) => {
 
-    const { items } = props;
+    const { items, handleClick } = props;
 
         return (
             <div>
@@ -10,6 +10,7 @@ const ToDoList = (props) => {
                         <ToDoItem 
                             key={index}
                             item={item}
+                            handleClick={() => handleClick(index)}
                         />
                     ))
                 }

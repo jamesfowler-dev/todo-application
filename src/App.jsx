@@ -10,14 +10,24 @@ import './App.css'
 
 function App() {
 
-
   const [ items, setItems ] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    const newItem = event.target[0].value; 
+    const newItem = { text: event.target[0].value, 
+                      completed: false, 
+                    }; 
     setItems([...items, newItem]);
     event.target[0].value = "";
+  }
+
+  const handleClick = (index) => {
+    setItems(
+      items.map(((item, i) =>
+          i === index ? { ...item, completed: !item.completed } : item
+        )
+      )
+    )
   }
 
 
@@ -29,6 +39,7 @@ function App() {
       />
       <ToDoList 
         items={items}
+        handleClick={handleClick}
       />
       <button>Reset</button>
 

@@ -2,14 +2,19 @@ import './ToDoItem.css'
 
 const ToDoItem = (props) => {
 
-    const { item } = props
+    const { item, handleClick } = props
 
     
     return (
-        
         <div>
-            <input type="checkbox"></input>
-            {item}
+            <input 
+                type="checkbox" 
+                onClick={handleClick}
+                checked={item.completed}
+            />
+            <span className={item.completed ? "completed" : ""}>
+                {item.text}
+            </span>
             <button>Delete</button>
             
         </div>
