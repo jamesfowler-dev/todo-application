@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import InputBar from "./components/InputBar.jsx";
 import ToDoList from "./components/ToDoList.jsx";
+import HarryPotterList from "./containers/HarryPotterList.jsx";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRotateLeft } from '@fortawesome/free-solid-svg-icons';
@@ -55,8 +56,9 @@ function App() {
     setItems([]);
   }
 
+
   return (
-    <>
+
       <div>
         <div>
           <h1>Todo-List</h1>
@@ -81,9 +83,10 @@ function App() {
             </button>
           </div>
         </div>
+        <div>
+          <HarryPotterList />
+        </div>
       </div>
-
-    </>
   )
 }
 
