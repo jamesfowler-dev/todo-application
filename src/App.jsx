@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 import InputBar from "./components/InputBar.jsx";
-import ToDoItem from "./components/ToDoItem.jsx";
 import ToDoList from "./components/ToDoList.jsx";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
